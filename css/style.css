@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #658396;
+}
+:root {
+  --main-text-color: black;
+  --main-display-background: #c2d5c4;
+  --main-font: "Ubuntu", sans-serif;
+  --display-padding: 0px;
+  --display-size: 2.5em;
+  --output-size: 1.5em;
+  --margin-display: 15px;
+  --calculator-background-color: #96b4c5;
+  --display-border-radius: 15px;
+  --display-border-color: #aebfb0;
+  --shadow-color: #808d95;
+  --main-border-color: #dae4ea;
+}
+
+.wrapper {
+  max-width: 440px;
+  margin: 0 auto;
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  background-color: var(--calculator-background-color);
+}
+
+.wrapper {
+  margin-top: 50px;
+  border-radius: var(--display-border-radius);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: solid;
+  border-color: var(--calculator-background-color);
+  box-shadow: 9px 12px 0px 0px var(--shadow-color);
+  grid-gap: 0px;
+  grid-template-rows: 150px 40px minmax(100px, auto) 40px;
+  border-color: var(--main-border-color);
+}
+
+.display {
+  margin-top: 100px;
+  border-top: solid;
+  border-right: solid;
+  border-left: solid;
+  border-color: var(--display-border-color);
+  grid-column: 1/6;
+  grid-row: 1;
+  padding-right: 5px;
+  background-color: var(--main-display-background);
+  padding-top: var(--display-padding);
+  font-size: var(--display-size);
+  margin-left: var(--margin-display);
+  margin-right: var(--margin-display);
+  border-top-left-radius: var(--display-border-radius);
+  border-top-right-radius: var(--display-border-radius);
+  text-align: right;
+}
+
+.output {
+  border-bottom: solid;
+  border-right: solid;
+  border-left: solid;
+  border-color: var(--display-border-color);
+  grid-column: 1/6;
+  grid-row: 2;
+  padding-right: 7px;
+  text-align: right;
+  background-color: var(--main-display-background);
+  padding-top: var(--display-padding);
+  font-size: var(--output-size);
+  margin-left: var(--margin-display);
+  margin-right: var(--margin-display);
+  border-bottom-left-radius: var(--display-border-radius);
+  border-bottom-right-radius: var(--display-border-radius);
+}
+
+.one {
+  margin-top: 40px;
+  grid-column: 1/6;
+  grid-row: 3;
+  padding-left: 14px;
+  padding-bottom: 5px;
+}
+
+.brand {
+  grid-column: 1/6;
+  grid-row: 4;
+  font-size: 18px;
+  text-align: center;
+  color: #86a6ba;
+  margin-top: 0px;
+  padding-top: 5px;
+}
+
+.brandName {
+  color: #927420;
+}
+
+.button {
+  background-color: #86a6ba;
+  border: solid;
+  border-radius: 20%;
+  color: #d5eaf6;
+  text-align: center;
+  text-decoration: none;
+  display: in-line block;
+  cursor: pointer;
+  margin: 0px 10px 10px 10px;
+  line-break: auto;
+  width: 80px;
+  height: 55px;
+  font-size: 1.2em;
+  box-shadow: 3px 6px 0px 0px var(--shadow-color);
+}
+
+.button:hover {
+}
+
+.button:active {
+  box-shadow: 0 1px white;
+  transform: translateY(4px);
+}
+
+.button:focus {
+  outline: none;
+}
